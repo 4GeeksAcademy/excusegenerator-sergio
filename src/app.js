@@ -2,10 +2,38 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let who = ["The dog", "My grandma", "His turtle", "My bird"];
+  let action = ["ate", "peed", "crushed", "broke"];
+  let what = ["my homework", "the keys", "the car"];
+  let when = [
+    "before the class",
+    "right on time",
+    "when I finished",
+    "during my lunch",
+    "while I was praying"
+  ];
+
+  let sentence = [];
+
+  for (let i = 0; i < 4; i++) {
+    if (i === 2) {
+      sentence[i] = Math.floor(Math.random() * 3);
+    } else if (i === 3) {
+      sentence[i] = Math.floor(Math.random() * 5);
+    } else {
+      sentence[i] = Math.floor(Math.random() * 4);
+    }
+  }
+
+  let fullSentence =
+    who[sentence[0]] +
+    " " +
+    action[sentence[1]] +
+    " " +
+    what[sentence[2]] +
+    " " +
+    when[sentence[3]];
+
+  document.getElementById("excuse").innerHTML = fullSentence;
 };
