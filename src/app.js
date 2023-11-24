@@ -17,12 +17,17 @@ window.onload = function() {
   let sentence = [];
 
   for (let i = 0; i < 4; i++) {
+    if (i === 0) {
+      sentence[i] = Math.floor(Math.random() * who.length);
+    }
+    if (i === 1) {
+      sentence[i] = Math.floor(Math.random() * action.length);
+    }
     if (i === 2) {
-      sentence[i] = Math.floor(Math.random() * 3);
-    } else if (i === 3) {
-      sentence[i] = Math.floor(Math.random() * 5);
-    } else {
-      sentence[i] = Math.floor(Math.random() * 4);
+      sentence[i] = Math.floor(Math.random() * what.length);
+    }
+    if (i === 3) {
+      sentence[i] = Math.floor(Math.random() * when.length);
     }
   }
 
